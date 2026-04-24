@@ -33,7 +33,7 @@ class ProductSeeder extends Seeder
 
                 $product->update([
                     'category_id' => $leafCategoryIds->random(),
-                    'slug' => Str::slug($product->name) . '-' . uniqid(),
+                    'slug'        => Str::slug($product->name).'-'.uniqid(),
                 ]);
             });
     }
