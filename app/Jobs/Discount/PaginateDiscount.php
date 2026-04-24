@@ -4,8 +4,8 @@ namespace App\Jobs\Discount;
 
 use App\Http\Requests\Discount\PaginateDiscountRequest;
 use App\Models\Discount;
-use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Foundation\Bus\Dispatchable;
 
 class PaginateDiscount
 {
@@ -46,4 +46,3 @@ class PaginateDiscount
             ->paginate($this->perPage);
     }
 }
-

@@ -5,9 +5,9 @@ namespace App\Jobs\Product;
 use App\Http\Requests\Product\PaginateProductRequest;
 use App\Models\Category;
 use App\Models\Product;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Collection;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 
 class PaginateProduct
@@ -95,7 +95,7 @@ class PaginateProduct
      */
     private function descendantCategoryIds(int $rootId): Collection
     {
-        $seen = collect([$rootId]);
+        $seen     = collect([$rootId]);
         $frontier = collect([$rootId]);
 
         while ($frontier->isNotEmpty()) {
@@ -108,11 +108,10 @@ class PaginateProduct
                 break;
             }
 
-            $seen = $seen->merge($new);
+            $seen     = $seen->merge($new);
             $frontier = $new;
         }
 
         return $seen->diff([$rootId])->values();
     }
 }
-

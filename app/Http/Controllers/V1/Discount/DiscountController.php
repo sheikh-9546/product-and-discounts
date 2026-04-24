@@ -93,4 +93,3 @@ class DiscountController extends Controller
             ->ok();
     }
 }
-

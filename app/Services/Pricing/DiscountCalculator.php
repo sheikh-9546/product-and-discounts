@@ -18,31 +18,31 @@ class DiscountCalculator
      */
     public function priceWithBestDiscount(Product $product): array
     {
-        $original = (float) $product->price;
+        $original  = (float) $product->price;
         $discounts = $this->applicableDiscounts($product);
 
-        $best = null;
+        $best       = null;
         $bestAmount = 0.0;
 
         foreach ($discounts as $candidate) {
             $amount = $this->discountAmount($candidate, $original);
             if ($amount > $bestAmount) {
                 $bestAmount = $amount;
-                $best = $candidate;
+                $best       = $candidate;
             }
         }
 
         $bestAmount = min($bestAmount, $original);
-        $final = max(0.0, $original - $bestAmount);
+        $final      = max(0.0, $original - $bestAmount);
 
         return [
-            'original_price' => number_format($original, 2, '.', ''),
-            'discount_amount' => number_format($bestAmount, 2, '.', ''),
-            'final_price' => number_format($final, 2, '.', ''),
+            'original_price'   => number_format($original, 2, '.', ''),
+            'discount_amount'  => number_format($bestAmount, 2, '.', ''),
+            'final_price'      => number_format($final, 2, '.', ''),
             'applied_discount' => $best ? [
-                'id' => $best->id,
+                'id'    => $best->id,
                 'title' => $best->title,
-                'type' => $best->type,
+                'type'  => $best->type,
                 'value' => (string) $best->value,
             ] : null,
         ];
@@ -68,10 +68,10 @@ class DiscountCalculator
 
         if ($discount->type === 'percentage') {
             $pct = (float) $discount->value;
+
             return max(0.0, $price * ($pct / 100.0));
         }
 
         return max(0.0, (float) $discount->value);
     }
 }
-

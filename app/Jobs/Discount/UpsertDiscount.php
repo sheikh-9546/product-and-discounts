@@ -39,4 +39,3 @@ class UpsertDiscount
         return $discount->fresh(['products']);
     }
 }
-

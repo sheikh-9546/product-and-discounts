@@ -14,16 +14,15 @@ class DiscountFactory extends Factory
 
     public function definition(): array
     {
-        $type = $this->faker->randomElement(['percentage', 'fixed']);
+        $type  = $this->faker->randomElement(['percentage', 'fixed']);
         $value = $type === 'percentage'
             ? $this->faker->numberBetween(5, 50)
             : $this->faker->randomFloat(2, 1, 100);
 
         return [
             'title' => $this->faker->unique()->words(2, true),
-            'type' => $type,
+            'type'  => $type,
             'value' => $value,
         ];
     }
 }
-

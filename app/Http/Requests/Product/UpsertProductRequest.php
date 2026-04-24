@@ -9,11 +9,11 @@ class UpsertProductRequest extends JsonRequest
     public function rules(): array
     {
         return [
-            'category_id' => ['sometimes', 'nullable', 'exists:categories,id'],
-            'name' => ['required', 'string', 'max:255'],
-            'description' => ['sometimes', 'nullable', 'string'],
-            'price' => ['required', 'numeric', 'min:0'],
-            'discount_ids' => ['sometimes', 'array'],
+            'category_id'    => ['sometimes', 'nullable', 'exists:categories,id'],
+            'name'           => ['required', 'string', 'max:255'],
+            'description'    => ['sometimes', 'nullable', 'string'],
+            'price'          => ['required', 'numeric', 'min:0'],
+            'discount_ids'   => ['sometimes', 'array'],
             'discount_ids.*' => ['integer', 'exists:discounts,id'],
         ];
     }
@@ -23,23 +23,23 @@ class UpsertProductRequest extends JsonRequest
         return [
             'category_id' => [
                 'description' => 'Category id for the product.',
-                'example' => 1,
+                'example'     => 1,
             ],
             'name' => [
                 'description' => 'Product name.',
-                'example' => 'Running Shoes',
+                'example'     => 'Running Shoes',
             ],
             'description' => [
                 'description' => 'Product description.',
-                'example' => 'Lightweight shoes for daily runs.',
+                'example'     => 'Lightweight shoes for daily runs.',
             ],
             'price' => [
                 'description' => 'Base price.',
-                'example' => 99.99,
+                'example'     => 99.99,
             ],
             'discount_ids' => [
                 'description' => 'Attach discounts directly to this product.',
-                'example' => [1, 2],
+                'example'     => [1, 2],
             ],
         ];
     }
@@ -54,4 +54,3 @@ class UpsertProductRequest extends JsonRequest
         return $this->get('discount_ids', []);
     }
 }
-

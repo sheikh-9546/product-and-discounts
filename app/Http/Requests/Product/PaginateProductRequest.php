@@ -10,13 +10,13 @@ class PaginateProductRequest extends JsonRequest
     public function rules(): array
     {
         return [
-            'search' => ['sometimes', 'nullable', 'string'],
-            'category_id' => ['sometimes', 'nullable', 'integer'],
+            'search'                => ['sometimes', 'nullable', 'string'],
+            'category_id'           => ['sometimes', 'nullable', 'integer'],
             'include_subcategories' => ['sometimes', 'nullable', 'boolean'],
-            'page' => ['sometimes', 'nullable', 'integer', 'min:1'],
-            'per_page' => ['sometimes', 'nullable', 'integer', 'min:1', 'max:200'],
-            'sort_column' => ['sometimes', 'nullable', Rule::in(['created_at', 'name', 'price'])],
-            'sort_direction' => ['sometimes', 'nullable', Rule::in(['asc', 'desc'])],
+            'page'                  => ['sometimes', 'nullable', 'integer', 'min:1'],
+            'per_page'              => ['sometimes', 'nullable', 'integer', 'min:1', 'max:200'],
+            'sort_column'           => ['sometimes', 'nullable', Rule::in(['created_at', 'name', 'price'])],
+            'sort_direction'        => ['sometimes', 'nullable', Rule::in(['asc', 'desc'])],
         ];
     }
 
@@ -25,31 +25,31 @@ class PaginateProductRequest extends JsonRequest
         return [
             'search' => [
                 'description' => 'LIKE-based search term (fallback) with optional MySQL full-text when available.',
-                'example' => 'shoe',
+                'example'     => 'shoe',
             ],
             'category_id' => [
                 'description' => 'Filter products by category id.',
-                'example' => 1,
+                'example'     => 1,
             ],
             'include_subcategories' => [
                 'description' => 'If true, includes products in nested subcategories of category_id.',
-                'example' => true,
+                'example'     => true,
             ],
             'page' => [
                 'description' => 'Page number.',
-                'example' => 1,
+                'example'     => 1,
             ],
             'per_page' => [
                 'description' => 'Items per page (max 200).',
-                'example' => 25,
+                'example'     => 25,
             ],
             'sort_column' => [
                 'description' => 'Sort column.',
-                'example' => 'created_at',
+                'example'     => 'created_at',
             ],
             'sort_direction' => [
                 'description' => 'Sort direction.',
-                'example' => 'desc',
+                'example'     => 'desc',
             ],
         ];
     }
@@ -91,4 +91,3 @@ class PaginateProductRequest extends JsonRequest
         return (string) $this->get('sort_direction', 'desc');
     }
 }
-

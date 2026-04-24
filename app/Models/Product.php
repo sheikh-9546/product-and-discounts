@@ -32,4 +32,3 @@ class Product extends Model
         return $this->belongsToMany(Discount::class, 'product_discount');
     }
 }
-

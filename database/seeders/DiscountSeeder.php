@@ -24,4 +24,3 @@ class DiscountSeeder extends Seeder
         }
     }
 }
-

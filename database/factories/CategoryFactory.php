@@ -19,8 +19,7 @@ class CategoryFactory extends Factory
 
         return [
             'parent_id' => null,
-            'name' => Str::title($name),
+            'name'      => Str::title($name),
         ];
     }
 }
-

@@ -10,10 +10,10 @@ class PaginateDiscountRequest extends JsonRequest
     public function rules(): array
     {
         return [
-            'search' => ['sometimes', 'nullable', 'string'],
-            'page' => ['sometimes', 'nullable', 'integer', 'min:1'],
-            'per_page' => ['sometimes', 'nullable', 'integer', 'min:1', 'max:200'],
-            'sort_column' => ['sometimes', 'nullable', Rule::in(['created_at', 'title', 'type', 'value'])],
+            'search'         => ['sometimes', 'nullable', 'string'],
+            'page'           => ['sometimes', 'nullable', 'integer', 'min:1'],
+            'per_page'       => ['sometimes', 'nullable', 'integer', 'min:1', 'max:200'],
+            'sort_column'    => ['sometimes', 'nullable', Rule::in(['created_at', 'title', 'type', 'value'])],
             'sort_direction' => ['sometimes', 'nullable', Rule::in(['asc', 'desc'])],
         ];
     }
@@ -21,10 +21,10 @@ class PaginateDiscountRequest extends JsonRequest
     public function queryParameters(): array
     {
         return [
-            'search' => ['description' => 'Search discounts by title (LIKE).', 'example' => 'summer'],
-            'page' => ['description' => 'Page number.', 'example' => 1],
-            'per_page' => ['description' => 'Items per page (max 200).', 'example' => 25],
-            'sort_column' => ['description' => 'Sort column.', 'example' => 'created_at'],
+            'search'         => ['description' => 'Search discounts by title (LIKE).', 'example' => 'summer'],
+            'page'           => ['description' => 'Page number.', 'example' => 1],
+            'per_page'       => ['description' => 'Items per page (max 200).', 'example' => 25],
+            'sort_column'    => ['description' => 'Sort column.', 'example' => 'created_at'],
             'sort_direction' => ['description' => 'Sort direction.', 'example' => 'desc'],
         ];
     }
@@ -54,4 +54,3 @@ class PaginateDiscountRequest extends JsonRequest
         return (string) $this->get('sort_direction', 'desc');
     }
 }
-

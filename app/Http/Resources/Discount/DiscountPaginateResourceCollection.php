@@ -17,11 +17,11 @@ class DiscountPaginateResourceCollection extends ResourceCollection
     private function toPaginate($resource): void
     {
         $this->pagination = [
-            'total' => $resource->total(),
-            'count' => $resource->count(),
-            'per_page' => $resource->perPage(),
+            'total'        => $resource->total(),
+            'count'        => $resource->count(),
+            'per_page'     => $resource->perPage(),
             'current_page' => $resource->currentPage(),
-            'total_pages' => $resource->lastPage(),
+            'total_pages'  => $resource->lastPage(),
         ];
     }
 
@@ -29,8 +29,7 @@ class DiscountPaginateResourceCollection extends ResourceCollection
     {
         return [
             'records' => DiscountResource::collection($this->collection),
-            'meta' => $this->pagination,
+            'meta'    => $this->pagination,
         ];
     }
 }
-

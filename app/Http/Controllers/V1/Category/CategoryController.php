@@ -34,4 +34,3 @@ class CategoryController extends Controller
             ->ok();
     }
 }
-

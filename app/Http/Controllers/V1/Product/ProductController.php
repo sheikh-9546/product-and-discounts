@@ -96,4 +96,3 @@ class ProductController extends Controller
             ->ok();
     }
 }
-
