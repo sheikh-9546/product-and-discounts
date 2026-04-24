@@ -72,7 +72,7 @@
                 </li>
                                     <ul id="tocify-subheader-categories" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="categories-GETapi-v1-categories">
-                                <a href="#categories-GETapi-v1-categories">List categories as a nested tree</a>
+                                <a href="#categories-GETapi-v1-categories">Allow to list all categories</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -82,7 +82,7 @@
                 </li>
                                     <ul id="tocify-subheader-discounts" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="discounts-GETapi-v1-discounts">
-                                <a href="#discounts-GETapi-v1-discounts">List discounts (pagination, search, sorting)</a>
+                                <a href="#discounts-GETapi-v1-discounts">Allow to list all discounts</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="discounts-POSTapi-v1-discounts">
                                 <a href="#discounts-POSTapi-v1-discounts">Create discount (bonus CRUD)</a>
@@ -136,19 +136,19 @@
                 </li>
                                     <ul id="tocify-subheader-products" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="products-GETapi-v1-products">
-                                <a href="#products-GETapi-v1-products">List products (pagination, search, sorting)</a>
+                                <a href="#products-GETapi-v1-products">Allow to list all products</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="products-POSTapi-v1-products">
-                                <a href="#products-POSTapi-v1-products">Create product (bonus CRUD)</a>
+                                <a href="#products-POSTapi-v1-products">Allow to create the product</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="products-GETapi-v1-products--id-">
                                 <a href="#products-GETapi-v1-products--id-">Show a single product (includes computed discounts)</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="products-PUTapi-v1-products--id-">
-                                <a href="#products-PUTapi-v1-products--id-">Update product (bonus CRUD)</a>
+                                <a href="#products-PUTapi-v1-products--id-">Allow to update the product</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="products-DELETEapi-v1-products--id-">
-                                <a href="#products-DELETEapi-v1-products--id-">Delete product (bonus CRUD)</a>
+                                <a href="#products-DELETEapi-v1-products--id-">Allow to delete the product</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -208,7 +208,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     <p>APIs for browsing categories (nested)</p>
 
-                                <h2 id="categories-GETapi-v1-categories">List categories as a nested tree</h2>
+                                <h2 id="categories-GETapi-v1-categories">Allow to list all categories</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -352,7 +352,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     <p>APIs for managing discounts</p>
 
-                                <h2 id="discounts-GETapi-v1-discounts">List discounts (pagination, search, sorting)</h2>
+                                <h2 id="discounts-GETapi-v1-discounts">Allow to list all discounts</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -510,7 +510,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value="summer"
                data-component="query">
     <br>
-<p>Search discounts by name (LIKE). Example: <code>summer</code></p>
+<p>Search discounts by title (LIKE). Example: <code>summer</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
@@ -1295,7 +1295,7 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
         &quot;user&quot;: {
-            &quot;id&quot;: 5023,
+            &quot;id&quot;: 5027,
             &quot;first_name&quot;: &quot;Julianne&quot;,
             &quot;last_name&quot;: &quot;Mueller&quot;,
             &quot;phone&quot;: &quot;+13523898369&quot;,
@@ -1307,9 +1307,9 @@ fetch(url, {
             &quot;status&quot;: 0
         },
         &quot;oauth_token&quot;: {
-            &quot;access_token&quot;: &quot;4|cHgzgtASgo9MJwzjM6A2jQgCJSmLvfgi5ExEuh4Hcaeede58&quot;,
+            &quot;access_token&quot;: &quot;6|SkABI1WCUp8cxOLLwY2vBlN4WEtXnaf1802TJReQ722e4943&quot;,
             &quot;expires_in&quot;: 7200,
-            &quot;created_at&quot;: 1777024270518
+            &quot;created_at&quot;: 1777025244868
         }
     }
 }</code>
@@ -2293,7 +2293,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     <p>APIs for managing products</p>
 
-                                <h2 id="products-GETapi-v1-products">List products (pagination, search, sorting)</h2>
+                                <h2 id="products-GETapi-v1-products">Allow to list all products</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -2533,7 +2533,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                 </form>
 
-                    <h2 id="products-POSTapi-v1-products">Create product (bonus CRUD)</h2>
+                    <h2 id="products-POSTapi-v1-products">Allow to create the product</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -2886,7 +2886,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="products-PUTapi-v1-products--id-">Update product (bonus CRUD)</h2>
+                    <h2 id="products-PUTapi-v1-products--id-">Allow to update the product</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -3103,7 +3103,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="products-DELETEapi-v1-products--id-">Delete product (bonus CRUD)</h2>
+                    <h2 id="products-DELETEapi-v1-products--id-">Allow to delete the product</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -3510,7 +3510,7 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 5024,
+        &quot;id&quot;: 5028,
         &quot;first_name&quot;: &quot;Julianne&quot;,
         &quot;last_name&quot;: &quot;Mueller&quot;,
         &quot;phone&quot;: &quot;+18782160129&quot;,
@@ -3707,7 +3707,7 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 5025,
+        &quot;id&quot;: 5029,
         &quot;first_name&quot;: &quot;Jerel&quot;,
         &quot;last_name&quot;: &quot;Hahn&quot;,
         &quot;phone&quot;: &quot;+19093217559&quot;,
@@ -3876,7 +3876,7 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 5026,
+        &quot;id&quot;: 5030,
         &quot;first_name&quot;: &quot;Julianne&quot;,
         &quot;last_name&quot;: &quot;Mueller&quot;,
         &quot;phone&quot;: &quot;+12056332847&quot;,

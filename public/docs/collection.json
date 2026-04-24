@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel API Documentation",
-        "_postman_id": "bbbc7257-3337-4fab-a882-81e60a08d11d",
+        "_postman_id": "3e86afcc-e636-4628-93a9-3d0c23a1313a",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -20,7 +20,7 @@
             "description": "\nAPIs for browsing categories (nested)",
             "item": [
                 {
-                    "name": "List categories as a nested tree",
+                    "name": "Allow to list all categories",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -71,7 +71,7 @@
             "description": "\nAPIs for managing discounts",
             "item": [
                 {
-                    "name": "List discounts (pagination, search, sorting)",
+                    "name": "Allow to list all discounts",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -80,7 +80,7 @@
                                 {
                                     "key": "search",
                                     "value": "summer",
-                                    "description": "Search discounts by name (LIKE).",
+                                    "description": "Search discounts by title (LIKE).",
                                     "disabled": false
                                 },
                                 {
@@ -335,7 +335,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"user\":{\"id\":5023,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+13523898369\",\"email\":\"luettgen.claire@example.net\",\"timezone\":null,\"country_code\":\"BQ\",\"is_default\":false,\"last_login\":null,\"status\":0},\"oauth_token\":{\"access_token\":\"4|cHgzgtASgo9MJwzjM6A2jQgCJSmLvfgi5ExEuh4Hcaeede58\",\"expires_in\":7200,\"created_at\":1777024270518}}}",
+                            "body": "{\"data\":{\"user\":{\"id\":5027,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+13523898369\",\"email\":\"luettgen.claire@example.net\",\"timezone\":null,\"country_code\":\"BQ\",\"is_default\":false,\"last_login\":null,\"status\":0},\"oauth_token\":{\"access_token\":\"6|SkABI1WCUp8cxOLLwY2vBlN4WEtXnaf1802TJReQ722e4943\",\"expires_in\":7200,\"created_at\":1777025244868}}}",
                             "name": ""
                         }
                     ]
@@ -580,7 +580,7 @@
             "description": "\nAPIs for managing products",
             "item": [
                 {
-                    "name": "List products (pagination, search, sorting)",
+                    "name": "Allow to list all products",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -668,7 +668,7 @@
                     ]
                 },
                 {
-                    "name": "Create product (bonus CRUD)",
+                    "name": "Allow to create the product",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -749,7 +749,7 @@
                     ]
                 },
                 {
-                    "name": "Update product (bonus CRUD)",
+                    "name": "Allow to update the product",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -785,7 +785,7 @@
                     "response": []
                 },
                 {
-                    "name": "Delete product (bonus CRUD)",
+                    "name": "Allow to delete the product",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -929,7 +929,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":5024,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+18782160129\",\"email\":\"tcollins@example.com\",\"timezone\":null,\"country_code\":\"KZ\",\"last_login\":null,\"status\":0}}",
+                            "body": "{\"data\":{\"id\":5028,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+18782160129\",\"email\":\"tcollins@example.com\",\"timezone\":null,\"country_code\":\"KZ\",\"last_login\":null,\"status\":0}}",
                             "name": ""
                         }
                     ]
@@ -969,7 +969,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":5025,\"first_name\":\"Jerel\",\"last_name\":\"Hahn\",\"phone\":\"+19093217559\",\"email\":\"damien.murazik@example.com\",\"timezone\":null,\"country_code\":\"NC\",\"is_default\":false,\"last_login\":null,\"status\":0}}",
+                            "body": "{\"data\":{\"id\":5029,\"first_name\":\"Jerel\",\"last_name\":\"Hahn\",\"phone\":\"+19093217559\",\"email\":\"damien.murazik@example.com\",\"timezone\":null,\"country_code\":\"NC\",\"is_default\":false,\"last_login\":null,\"status\":0}}",
                             "name": ""
                         }
                     ]
@@ -1012,7 +1012,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":5026,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+12056332847\",\"email\":\"charity81@example.net\",\"timezone\":null,\"country_code\":\"CV\",\"last_login\":null,\"status\":0}}",
+                            "body": "{\"data\":{\"id\":5030,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+12056332847\",\"email\":\"charity81@example.net\",\"timezone\":null,\"country_code\":\"CV\",\"last_login\":null,\"status\":0}}",
                             "name": ""
                         }
                     ]

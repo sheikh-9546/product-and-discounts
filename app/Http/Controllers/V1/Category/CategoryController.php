@@ -18,7 +18,7 @@ use Illuminate\Http\JsonResponse;
 class CategoryController extends Controller
 {
     /**
-     * List categories as a nested tree
+     *  Allow to list all categories
      */
     public function index(): JsonResponse
     {
@@ -29,7 +29,7 @@ class CategoryController extends Controller
             ->get();
 
         return HttpResponse::make()
-            ->setMessage('Categories list')
+            ->setMessage(trans('messages.category.list'))
             ->setData(CategoryResource::collection($categories))
             ->ok();
     }

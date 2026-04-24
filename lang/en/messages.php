@@ -26,5 +26,21 @@ return [
         'update' => 'Permission updated successfully!',
         'delete' => 'Permission deleted successfully!',
     ],
-
+    'category' => [
+        'list' => 'Categories list retrived successfully!',
+    ],
+    'discount' => [
+        'list'   => 'Discounts list retrived successfully!',
+        'show'   => 'Discount details retrieved successfully!!',
+        'create' => 'Discount created successfully!',
+        'update' => 'Discount updated successfully!',
+        'delete' => 'Discount deleted successfully!',
+    ],
+    'product' => [
+        'list'   => 'Products list retrived successfully!',
+        'show'   => 'Product details retrieved successfully!!',
+        'create' => 'Product created successfully!',
+        'update' => 'Product updated successfully!',
+        'delete' => 'Product deleted successfully!',
+    ],
 ];

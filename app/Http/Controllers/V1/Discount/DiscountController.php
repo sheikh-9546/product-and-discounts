@@ -24,7 +24,7 @@ use Illuminate\Http\Response;
 class DiscountController extends Controller
 {
     /**
-     * List discounts (pagination, search, sorting)
+     * Allow to list all discounts
      */
     public function index(PaginateDiscountRequest $request): JsonResponse
     {
@@ -33,7 +33,7 @@ class DiscountController extends Controller
         $paginateCollection = $this->dispatchSync(PaginateDiscount::fromRequest($request));
 
         return HttpResponse::make()
-            ->setMessage('Discounts list')
+            ->setMessage(trans('messages.discount.list'))
             ->setData(DiscountPaginateResourceCollection::make($paginateCollection))
             ->ok();
     }
@@ -46,7 +46,7 @@ class DiscountController extends Controller
         $discount->loadMissing(['products']);
 
         return HttpResponse::make()
-            ->setMessage('Discount details')
+            ->setMessage(trans('messages.discount.show'))
             ->setData(DiscountResource::make($discount))
             ->ok();
     }
@@ -61,7 +61,7 @@ class DiscountController extends Controller
         $created = $this->dispatchSync(UpsertDiscount::forCreate($request));
 
         return HttpResponse::make()
-            ->setMessage('Discount created')
+            ->setMessage(trans('messages.discount.create'))
             ->setData(DiscountResource::make($created))
             ->ok(Response::HTTP_CREATED);
     }
@@ -76,7 +76,7 @@ class DiscountController extends Controller
         $updated = $this->dispatchSync(UpsertDiscount::forUpdate($request, $discount));
 
         return HttpResponse::make()
-            ->setMessage('Discount updated')
+            ->setMessage(trans('messages.discount.update'))
             ->setData(DiscountResource::make($updated))
             ->ok();
     }
@@ -89,7 +89,7 @@ class DiscountController extends Controller
         $discount->delete();
 
         return HttpResponse::make()
-            ->setMessage('Discount deleted')
+            ->setMessage(trans('messages.discount.delete'))
             ->ok();
     }
 }

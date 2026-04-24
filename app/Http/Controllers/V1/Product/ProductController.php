@@ -24,7 +24,7 @@ use Illuminate\Http\Response;
 class ProductController extends Controller
 {
     /**
-     * List products (pagination, search, sorting)
+     * Allow to list all products
      */
     public function index(PaginateProductRequest $request): JsonResponse
     {
@@ -33,7 +33,7 @@ class ProductController extends Controller
         $paginateCollection = $this->dispatchSync(PaginateProduct::fromRequest($request));
 
         return HttpResponse::make()
-            ->setMessage('Products list')
+            ->setMessage(trans('messages.product.list'))
             ->setData(ProductPaginateResourceCollection::make($paginateCollection))
             ->ok();
     }
@@ -49,13 +49,13 @@ class ProductController extends Controller
         ]);
 
         return HttpResponse::make()
-            ->setMessage('Product details')
+            ->setMessage(trans('messages.product.show'))
             ->setData(ProductResource::make($product))
             ->ok();
     }
 
     /**
-     * Create product (bonus CRUD)
+     * Allow to create the product
      */
     public function store(UpsertProductRequest $request): JsonResponse
     {
@@ -64,13 +64,13 @@ class ProductController extends Controller
         $created = $this->dispatchSync(UpsertProduct::forCreate($request));
 
         return HttpResponse::make()
-            ->setMessage('Product created')
+            ->setMessage(trans('messages.product.create'))
             ->setData(ProductResource::make($created))
             ->ok(Response::HTTP_CREATED);
     }
 
     /**
-     * Update product (bonus CRUD)
+     * Allow to update the product
      */
     public function update(UpsertProductRequest $request, Product $product): JsonResponse
     {
@@ -79,20 +79,20 @@ class ProductController extends Controller
         $updated = $this->dispatchSync(UpsertProduct::forUpdate($request, $product));
 
         return HttpResponse::make()
-            ->setMessage('Product updated')
+            ->setMessage(trans('messages.product.update'))
             ->setData(ProductResource::make($updated))
             ->ok();
     }
 
     /**
-     * Delete product (bonus CRUD)
+     * Allow to delete the product
      */
     public function destroy(Product $product): JsonResponse
     {
         $product->delete();
 
         return HttpResponse::make()
-            ->setMessage('Product deleted')
+            ->setMessage(trans('messages.product.delete'))
             ->ok();
     }
 }
