@@ -5,6 +5,7 @@ namespace App\Jobs\Product;
 use App\Http\Requests\Product\UpsertProductRequest;
 use App\Models\Product;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Support\Str;
 
 class UpsertProduct
 {
@@ -28,14 +29,34 @@ class UpsertProduct
 
     public function handle(): Product
     {
+        $data = $this->payload;
+
+        if (! $this->product && empty($data['slug'])) {
+            $data['slug'] = $this->generateUniqueSlug($data['name']);
+        }
+
         $product = $this->product
-            ? tap($this->product)->update($this->payload)
-            : Product::create($this->payload);
+            ? tap($this->product)->update($data)
+            : Product::create($data);
 
         if (is_array($this->discountIds)) {
             $product->discounts()->sync($this->discountIds);
         }
 
         return $product->fresh(['category', 'discounts']);
+    }
+
+    private function generateUniqueSlug(string $name): string
+    {
+        $baseSlug = Str::slug($name);
+        $slug     = $baseSlug;
+        $counter  = 1;
+
+        while (Product::withTrashed()->where('slug', $slug)->exists()) {
+            $slug = $baseSlug.'-'.$counter;
+            $counter++;
+        }
+
+        return $slug;
     }
 }

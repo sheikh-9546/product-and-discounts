@@ -24,7 +24,7 @@ class CategoryController extends Controller
     {
         $categories = Category::query()
             ->whereNull('parent_id')
-            ->with('children.children.children')
+            ->with('childrenRecursive')
             ->orderBy('name')
             ->get();
 
