@@ -10,7 +10,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(2001);
             $table->foreignId('category_id')->nullable()->constrained('categories')->nullOnDelete();
             $table->string('name')->index();
             $table->string('slug')->unique();
@@ -18,6 +18,9 @@ return new class extends Migration
             $table->decimal('price', 12, 2);
             $table->boolean('is_active')->default(true)->index();
             $table->timestamps();
+            $table->softDeletes();
+            $table->bigInteger('created_by')->nullable()->index();
+            $table->bigInteger('updated_by')->nullable()->index();
         });
 
         // Optional: for MySQL full-text search (query has LIKE fallback).

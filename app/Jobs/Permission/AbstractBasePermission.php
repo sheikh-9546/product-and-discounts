@@ -8,8 +8,8 @@ use Illuminate\Foundation\Bus\Dispatchable;
 class AbstractBasePermission
 {
     use Dispatchable;
-
-    protected Permission $permission;
+    
+    protected readonly Permission $permission;
 
     private readonly string $name;
 

@@ -9,9 +9,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('product_discount', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(4001);
             $table->foreignId('product_id')->constrained('products')->cascadeOnDelete();
             $table->foreignId('discount_id')->constrained('discounts')->cascadeOnDelete();
+            $table->timestamps();
+            $table->softDeletes();
+            $table->bigInteger('created_by')->nullable()->index();
+            $table->bigInteger('updated_by')->nullable()->index();
         });
     }
 

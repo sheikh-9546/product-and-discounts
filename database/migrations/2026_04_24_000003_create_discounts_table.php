@@ -9,11 +9,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('discounts', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(3001);
             $table->string('title');
             $table->enum('type', ['percentage', 'fixed']);
             $table->decimal('value', 10, 2);
             $table->timestamps();
+            $table->softDeletes();
+            $table->bigInteger('created_by')->nullable()->index();
+            $table->bigInteger('updated_by')->nullable()->index();
         });
     }
 

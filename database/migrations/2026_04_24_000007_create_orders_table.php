@@ -9,10 +9,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(6001);
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->decimal('total', 12, 2);
-            $table->timestamp('created_at')->useCurrent();
+            $table->timestamps();
+            $table->softDeletes();
+            $table->bigInteger('created_by')->nullable()->index();
+            $table->bigInteger('updated_by')->nullable()->index();
         });
     }
 

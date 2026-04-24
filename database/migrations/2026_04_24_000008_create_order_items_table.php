@@ -14,6 +14,10 @@ return new class extends Migration
             $table->foreignId('product_id')->constrained('products')->restrictOnDelete();
             $table->integer('quantity');
             $table->decimal('price_at_purchase', 12, 2);
+            $table->timestamps();
+            $table->softDeletes();
+            $table->bigInteger('created_by')->nullable()->index();
+            $table->bigInteger('updated_by')->nullable()->index();
         });
     }
 

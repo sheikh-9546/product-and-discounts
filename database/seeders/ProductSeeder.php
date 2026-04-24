@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class ProductSeeder extends Seeder
 {
@@ -19,15 +20,21 @@ class ProductSeeder extends Seeder
             ->pluck('id');
 
         if ($leafCategoryIds->isEmpty()) {
-            $leafCategoryIds = Category::factory()->count(5)->create()->pluck('id');
+            $leafCategoryIds = Category::factory()
+                ->count(5)
+                ->create()
+                ->pluck('id');
         }
 
         Product::factory()
             ->count(60)
-            ->make()
+            ->create()
             ->each(function (Product $product) use ($leafCategoryIds) {
-                $product->category_id = $leafCategoryIds->random();
-                $product->save();
+
+                $product->update([
+                    'category_id' => $leafCategoryIds->random(),
+                    'slug' => Str::slug($product->name) . '-' . uniqid(),
+                ]);
             });
     }
 }
