@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var tryItOutBaseUrl = "http://user-module.test";
+        var tryItOutBaseUrl = "http://product-discounts.test";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -192,7 +192,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://user-module.test</code>
+    <strong>Base URL</strong>: <code>http://product-discounts.test</code>
 </aside>
 <pre><code>This documentation aims to provide all the information you need to work with our API.
 
@@ -222,7 +222,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://user-module.test/api/v1/categories" \
+    --get "http://product-discounts.test/api/v1/categories" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -230,7 +230,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/categories"
+    "http://product-discounts.test/api/v1/categories"
 );
 
 const headers = {
@@ -366,7 +366,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://user-module.test/api/v1/discounts?search=summer&amp;page=1&amp;per_page=25&amp;sort_column=created_at&amp;sort_direction=desc" \
+    --get "http://product-discounts.test/api/v1/discounts?search=summer&amp;page=1&amp;per_page=25&amp;sort_column=created_at&amp;sort_direction=desc" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -374,7 +374,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/discounts"
+    "http://product-discounts.test/api/v1/discounts"
 );
 
 const params = {
@@ -572,7 +572,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://user-module.test/api/v1/discounts" \
+    "http://product-discounts.test/api/v1/discounts" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -589,7 +589,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/discounts"
+    "http://product-discounts.test/api/v1/discounts"
 );
 
 const headers = {
@@ -760,7 +760,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://user-module.test/api/v1/discounts/17" \
+    --get "http://product-discounts.test/api/v1/discounts/17" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -768,7 +768,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/discounts/17"
+    "http://product-discounts.test/api/v1/discounts/17"
 );
 
 const headers = {
@@ -912,7 +912,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://user-module.test/api/v1/discounts/17" \
+    "http://product-discounts.test/api/v1/discounts/17" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -929,7 +929,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/discounts/17"
+    "http://product-discounts.test/api/v1/discounts/17"
 );
 
 const headers = {
@@ -1116,7 +1116,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://user-module.test/api/v1/discounts/18" \
+    "http://product-discounts.test/api/v1/discounts/17" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1124,7 +1124,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/discounts/18"
+    "http://product-discounts.test/api/v1/discounts/17"
 );
 
 const headers = {
@@ -1229,10 +1229,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                name="id"                data-endpoint="DELETEapi-v1-discounts--id-"
-               value="18"
+               value="17"
                data-component="url">
     <br>
-<p>The ID of the discount. Example: <code>18</code></p>
+<p>The ID of the discount. Example: <code>17</code></p>
             </div>
                     </form>
 
@@ -1253,7 +1253,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://user-module.test/api/v1/oauth/login" \
+    "http://product-discounts.test/api/v1/oauth/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1265,7 +1265,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/oauth/login"
+    "http://product-discounts.test/api/v1/oauth/login"
 );
 
 const headers = {
@@ -1295,7 +1295,7 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
         &quot;user&quot;: {
-            &quot;id&quot;: 5015,
+            &quot;id&quot;: 5023,
             &quot;first_name&quot;: &quot;Julianne&quot;,
             &quot;last_name&quot;: &quot;Mueller&quot;,
             &quot;phone&quot;: &quot;+13523898369&quot;,
@@ -1307,9 +1307,9 @@ fetch(url, {
             &quot;status&quot;: 0
         },
         &quot;oauth_token&quot;: {
-            &quot;access_token&quot;: &quot;2|WYS0ONrnAuQoXnuYTUJkZWeOVzaRgeaaaPTdXE4a36624a23&quot;,
+            &quot;access_token&quot;: &quot;4|cHgzgtASgo9MJwzjM6A2jQgCJSmLvfgi5ExEuh4Hcaeede58&quot;,
             &quot;expires_in&quot;: 7200,
-            &quot;created_at&quot;: 1777021726116
+            &quot;created_at&quot;: 1777024270518
         }
     }
 }</code>
@@ -1427,7 +1427,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://user-module.test/api/v1/permission?search=&amp;page=&amp;per_page=&amp;sort_column=&amp;sort_direction=" \
+    --get "http://product-discounts.test/api/v1/permission?search=&amp;page=&amp;per_page=&amp;sort_column=&amp;sort_direction=" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1435,7 +1435,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/permission"
+    "http://product-discounts.test/api/v1/permission"
 );
 
 const params = {
@@ -1633,7 +1633,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://user-module.test/api/v1/permission" \
+    "http://product-discounts.test/api/v1/permission" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -1647,7 +1647,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/permission"
+    "http://product-discounts.test/api/v1/permission"
 );
 
 const headers = {
@@ -1818,7 +1818,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://user-module.test/api/v1/permission/17" \
+    --get "http://product-discounts.test/api/v1/permission/17" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1826,7 +1826,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/permission/17"
+    "http://product-discounts.test/api/v1/permission/17"
 );
 
 const headers = {
@@ -1968,7 +1968,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://user-module.test/api/v1/permission/17" \
+    "http://product-discounts.test/api/v1/permission/17" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -1982,7 +1982,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/permission/17"
+    "http://product-discounts.test/api/v1/permission/17"
 );
 
 const headers = {
@@ -2169,7 +2169,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://user-module.test/api/v1/permission/17" \
+    "http://product-discounts.test/api/v1/permission/17" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2177,7 +2177,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/permission/17"
+    "http://product-discounts.test/api/v1/permission/17"
 );
 
 const headers = {
@@ -2307,7 +2307,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://user-module.test/api/v1/products?search=shoe&amp;category_id=1&amp;include_subcategories=&amp;page=1&amp;per_page=25&amp;sort_column=created_at&amp;sort_direction=desc" \
+    --get "http://product-discounts.test/api/v1/products?search=shoe&amp;category_id=1&amp;include_subcategories=&amp;page=1&amp;per_page=25&amp;sort_column=created_at&amp;sort_direction=desc" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2315,7 +2315,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/products"
+    "http://product-discounts.test/api/v1/products"
 );
 
 const params = {
@@ -2547,7 +2547,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://user-module.test/api/v1/products" \
+    "http://product-discounts.test/api/v1/products" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -2565,7 +2565,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/products"
+    "http://product-discounts.test/api/v1/products"
 );
 
 const headers = {
@@ -2748,7 +2748,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://user-module.test/api/v1/products/17" \
+    --get "http://product-discounts.test/api/v1/products/17" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2756,7 +2756,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/products/17"
+    "http://product-discounts.test/api/v1/products/17"
 );
 
 const headers = {
@@ -2900,7 +2900,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://user-module.test/api/v1/products/17" \
+    "http://product-discounts.test/api/v1/products/17" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -2918,7 +2918,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/products/17"
+    "http://product-discounts.test/api/v1/products/17"
 );
 
 const headers = {
@@ -3117,7 +3117,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://user-module.test/api/v1/products/17" \
+    "http://product-discounts.test/api/v1/products/17" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3125,7 +3125,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/products/17"
+    "http://product-discounts.test/api/v1/products/17"
 );
 
 const headers = {
@@ -3255,7 +3255,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://user-module.test/api/v1/user?search=&amp;page=&amp;per_page=&amp;sort_column=&amp;sort_direction=" \
+    --get "http://product-discounts.test/api/v1/user?search=&amp;page=&amp;per_page=&amp;sort_column=&amp;sort_direction=" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3263,7 +3263,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/user"
+    "http://product-discounts.test/api/v1/user"
 );
 
 const params = {
@@ -3461,7 +3461,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://user-module.test/api/v1/user" \
+    "http://product-discounts.test/api/v1/user" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -3477,7 +3477,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/user"
+    "http://product-discounts.test/api/v1/user"
 );
 
 const headers = {
@@ -3510,7 +3510,7 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 5016,
+        &quot;id&quot;: 5024,
         &quot;first_name&quot;: &quot;Julianne&quot;,
         &quot;last_name&quot;: &quot;Mueller&quot;,
         &quot;phone&quot;: &quot;+18782160129&quot;,
@@ -3675,7 +3675,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://user-module.test/api/v1/user/5000" \
+    --get "http://product-discounts.test/api/v1/user/5000" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3683,7 +3683,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/user/5000"
+    "http://product-discounts.test/api/v1/user/5000"
 );
 
 const headers = {
@@ -3707,7 +3707,7 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 5017,
+        &quot;id&quot;: 5025,
         &quot;first_name&quot;: &quot;Jerel&quot;,
         &quot;last_name&quot;: &quot;Hahn&quot;,
         &quot;phone&quot;: &quot;+19093217559&quot;,
@@ -3829,7 +3829,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://user-module.test/api/v1/user/5000" \
+    "http://product-discounts.test/api/v1/user/5000" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -3844,7 +3844,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/user/5000"
+    "http://product-discounts.test/api/v1/user/5000"
 );
 
 const headers = {
@@ -3876,7 +3876,7 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 5018,
+        &quot;id&quot;: 5026,
         &quot;first_name&quot;: &quot;Julianne&quot;,
         &quot;last_name&quot;: &quot;Mueller&quot;,
         &quot;phone&quot;: &quot;+12056332847&quot;,
@@ -4046,7 +4046,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://user-module.test/api/v1/user/5000" \
+    "http://product-discounts.test/api/v1/user/5000" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -4054,7 +4054,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://user-module.test/api/v1/user/5000"
+    "http://product-discounts.test/api/v1/user/5000"
 );
 
 const headers = {

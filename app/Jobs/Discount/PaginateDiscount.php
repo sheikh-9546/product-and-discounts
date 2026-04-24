@@ -37,7 +37,7 @@ class PaginateDiscount
         $term = trim((string) $this->search);
         if ($term !== '') {
             $query->where(function (Builder $q) use ($term) {
-                $q->where('name', 'like', "%{$term}%");
+                $q->where('title', 'like', "%{$term}%");
             });
         }
 

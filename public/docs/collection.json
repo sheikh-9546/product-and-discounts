@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "http:\/\/user-module.test"
+            "value": "http:\/\/product-discounts.test"
         }
     ],
     "info": {
         "name": "Laravel API Documentation",
-        "_postman_id": "384b93f1-6d25-48dd-87a9-3703e75c8fd1",
+        "_postman_id": "bbbc7257-3337-4fab-a882-81e60a08d11d",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -275,7 +275,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "18",
+                                    "value": "17",
                                     "description": "The ID of the discount."
                                 }
                             ]
@@ -335,7 +335,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"user\":{\"id\":5015,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+13523898369\",\"email\":\"luettgen.claire@example.net\",\"timezone\":null,\"country_code\":\"BQ\",\"is_default\":false,\"last_login\":null,\"status\":0},\"oauth_token\":{\"access_token\":\"2|WYS0ONrnAuQoXnuYTUJkZWeOVzaRgeaaaPTdXE4a36624a23\",\"expires_in\":7200,\"created_at\":1777021726116}}}",
+                            "body": "{\"data\":{\"user\":{\"id\":5023,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+13523898369\",\"email\":\"luettgen.claire@example.net\",\"timezone\":null,\"country_code\":\"BQ\",\"is_default\":false,\"last_login\":null,\"status\":0},\"oauth_token\":{\"access_token\":\"4|cHgzgtASgo9MJwzjM6A2jQgCJSmLvfgi5ExEuh4Hcaeede58\",\"expires_in\":7200,\"created_at\":1777024270518}}}",
                             "name": ""
                         }
                     ]
@@ -929,7 +929,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":5016,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+18782160129\",\"email\":\"tcollins@example.com\",\"timezone\":null,\"country_code\":\"KZ\",\"last_login\":null,\"status\":0}}",
+                            "body": "{\"data\":{\"id\":5024,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+18782160129\",\"email\":\"tcollins@example.com\",\"timezone\":null,\"country_code\":\"KZ\",\"last_login\":null,\"status\":0}}",
                             "name": ""
                         }
                     ]
@@ -969,7 +969,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":5017,\"first_name\":\"Jerel\",\"last_name\":\"Hahn\",\"phone\":\"+19093217559\",\"email\":\"damien.murazik@example.com\",\"timezone\":null,\"country_code\":\"NC\",\"is_default\":false,\"last_login\":null,\"status\":0}}",
+                            "body": "{\"data\":{\"id\":5025,\"first_name\":\"Jerel\",\"last_name\":\"Hahn\",\"phone\":\"+19093217559\",\"email\":\"damien.murazik@example.com\",\"timezone\":null,\"country_code\":\"NC\",\"is_default\":false,\"last_login\":null,\"status\":0}}",
                             "name": ""
                         }
                     ]
@@ -1012,7 +1012,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":5018,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+12056332847\",\"email\":\"charity81@example.net\",\"timezone\":null,\"country_code\":\"CV\",\"last_login\":null,\"status\":0}}",
+                            "body": "{\"data\":{\"id\":5026,\"first_name\":\"Julianne\",\"last_name\":\"Mueller\",\"phone\":\"+12056332847\",\"email\":\"charity81@example.net\",\"timezone\":null,\"country_code\":\"CV\",\"last_login\":null,\"status\":0}}",
                             "name": ""
                         }
                     ]
